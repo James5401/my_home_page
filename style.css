@@ -69,7 +69,12 @@
 ul {
   display: flex;
   list-style: none;
-  padding: 0;
+  padding: 9px;
+  list-style-type: none;
+  margin: 0;
+  justify-content: space-between;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+              
 }
 
 li {
@@ -87,18 +92,6 @@ li {
     margin-bottom: 10px;
   }
 }
-
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 9px;
-            display: flex;
-            justify-content: space-between;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-            
-               
-        }
 
         nav ul li {
             margin-right: 10px;
