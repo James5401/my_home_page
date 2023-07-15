@@ -1,0 +1,504 @@
+
+
+.slider-container {
+    
+    
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+.slider {
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.slider-indicators span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-indicators span.active {
+    background-color: #333;
+}
+
+
+        
+        header {
+            background-color: #333;
+            padding: 2.5px*10px*2.5px;
+            color: #35155a;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+            
+            
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 9px;
+            display: flex;
+            justify-content: space-between;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+            
+               
+        }
+
+        nav ul li {
+            margin-right: 10px;
+            padding: 2.5px;
+        }
+
+       
+
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+          }
+          
+          nav ul li a:hover {
+            background-color: #7c067c;
+            border-radius: 10px 10px ;
+            padding: 10px;
+          }
+
+        main {
+            border-radius: 10px 10px;
+            padding: 10px;
+            background-color: #cdc8d4;
+            margin: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+        
+        }
+
+        
+        .slider-item {
+            margin: 10px;
+        }
+
+        #except {
+            margin-bottom: 20px;
+        }
+
+        #courses {
+            margin-bottom: 20px;
+        }
+
+        #calendar {
+            margin-bottom: 20px;
+        }
+
+        #testimonials {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            border-radius: 10px 10px;
+            padding: 10px;
+            
+            margin: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #cdc8d4;
+            padding: 10px 10px;
+            color: #221818;
+            text-align: center;
+        }
+
+        body {
+            border-radius: 10px 10px;
+            background-image: url("assest/synthwave prime.jpg");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;}
+            
+
+ .rounded-button{
+    border-radius:5px;
+    background-color: #6f62e6;
+    color: #cdc8d4;
+    padding: 7px 70px 7px;
+    transition-duration: 0.5s ease;
+    cursor: pointer;
+    display: inline-block;
+
+ }  
+
+:root {
+    --background: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.background {
+    background-color: #6f62e6;
+    border-radius: 10px 10px ;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 800px;
+    transition: 0.5s ease-in-out;
+}
+
+.card {
+    position: relative;
+    left: 0px;
+    width: 80px;
+    border-radius: 16px;
+    height: 360px;
+    overflow: hidden;
+    background-color: var(--background);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+    flex: 0.25;
+    transition: 0.3s ease-in-out;
+}
+
+.card img {
+    height: 360px;
+}
+
+.card:hover {
+    flex:2;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+
+:root {
+    --primary: #625BFE;
+    --primary-hover: #7771f7;                
+    --text: #383740;
+    --text-lighter: #71707d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Mulish;
+}
+
+h1 {
+    color: var(--text);
+}
+
+
+
+.socials-row {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0px ;
+}
+
+.socials-row img {
+    width: 24px;
+    height: 24px;
+}
+
+.socials-row > a {
+    background-color: var(--secondary);
+    border-radius: 8px;
+    width: 100%;
+    min-height: 48px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--text);
+    border: 1px solid var(--text-lighter);
+    font-weight: 700;
+}
+
+.socials-row > a:hover {
+    background-color: var(--secondary-hover);
+    border: 1px solid var(--primary);
+}
+
+.divider {
+    display: flex;
+    flex-direction: row;
+    color: var(--text-lighter);
+    gap: 16px;
+    align-items: center;
+}
+
+.divider-line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--text-lighter);
+    opacity: .2;
+}
+
+.centering {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.my-form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 16px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px var(--aura);
+    min-width: 280px;
+    max-width: 500px;
+    width: 100%;
+    padding: 32px;
+}
+
+.signup-welcome {
+    height: 80px;
+    width: 80px;
+    object-fit: cover;
+}
+
+.signup-welcome-row {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.my-form__button {
+    background-color: var(--primary);
+    color: white;
+    white-space: nowrap;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+    line-height: 50px;
+    outline: none;
+    font-size: 18px;
+    letter-spacing: .025em;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 800;
+    min-height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.15);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.text-field input {
+    color: var(--text-lighter);
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid var(--text-lighter);
+    height: 50px;
+    color: var(--text);
+    letter-spacing: .03rem;
+    background-color: transparent;
+    outline: none;
+    transition: .25s;
+    border-radius: 8px;
+    text-indent: 20px;
+    margin-top: 8px;
+}
+
+.text-field input:focus {
+    border: 1px solid var(--primary);
+}
+
+.my-form__button:hover {
+    background-color: var(--primary-hover);
+}
+
+.text-field {
+    position: relative;
+}
+
+.text-field input::-webkit-input-placeholder {
+    color: var(--text-lighter);
+}
+
+.text-field svg {
+    position: absolute;
+    right: -2px;
+    bottom: -4px;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%,-50%);
+    transform-origin: center;
+    stroke: var(--text);
+}
+
+.text-field input:focus + svg {
+    stroke: var(--primary);
+}
+
+.text-field label {
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .03rem;
+    z-index: 10;
+}
+
+.text-field label:has(+ input:focus) {
+    color: var(--primary);
+}
+
+.input-icon {
+    position: absolute;
+    bottom: 0;
+    top: 55%;
+    right: 8px;
+    transform: translate(-50%, -50%);
+    transform-origin: center;
+}
+
+.my-form__actions {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.my-form__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.my-form__actions a {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.my-form__actions a:hover {
+    text-decoration: underline;          
+}
+
+.my-form__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-form__signin {
+    display: flex;
+    justify-content: center;
+}
+
+.my-form__signin a {
+    color: var(--primary);
+    font-weight: 800;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.my-form__signin a:hover {
+    text-decoration: underline;
+}
+
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+ 
+ body {
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+  }
+  /* CSS Enhancements */
+  .calender-information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  .calender-details {
+    width: 250px;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  .calender-details:hover {
+    transform: scale(1.05);
+  }
+  /* JavaScript Interactivity */
+  .countdown-timer {
+    font-size: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  
