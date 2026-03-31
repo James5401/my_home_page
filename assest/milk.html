@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Home Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        .slider {
+            position: relative;
+        }
+
+        .slider-container {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .slider-indicators {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .slider-indicators span {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #bbb;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .slider-indicators span.active {
+            background-color: #333;
+        }
+
+        header {
+            background-color: #333;
+            padding: 15px;
+            color: #fff;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display:flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        main {
+            padding: 20px;
+            background-color: #fff;
+            margin: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        #except {
+            margin-bottom: 20px;
+        }
+
+        #courses {
+            margin-bottom: 20px;
+        }
+
+        #calendar {
+            margin-bottom: 20px;
+        }
+
+        #testimonials {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+        }
+
+        body {
+            background-image: url("assest/synthwave down scaled.jpg");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+  
+    <header>
+        <nav>
+            <ul>
+                <li><a href="current assiagnments.html">Home</a></li>
+                <li><a href="Gallary.html">Gallery</a></li>
+                <li><a href="contact.html">Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+      <section id="slider">
+        <div class="slider-container">
+            <img src="assest/3.png" class="slide">
+            <img src="assest/forest 2.png" class="slide">
+            <img src="assest/synthwave 2.png" class="slide">
+            <div class="slider-indicators">
+                <span onclick="changeSlide(2)"></span>
+                <span onclick="changeSlide(3)"></span>
+            </div>
+        </div>
+    </section>
+    
+        <section id="except">
+            <h1>About Me</h1>
+            <p>
+                My name is Ebenezer Cobbinah, but I'm mostly known as <b>"0xide"</b>. I've been fascinated by science and technology since childhood. I love to know the inner workings of any electronic device I use. As I got older, my interest in technology and programming grew stronger. I aspire to be a research scientist for machine learning algorithms.
+                <!-- Rest of the content -->
+            </p>
+        </section>
+        <section id="courses">
+          <h2>Courses This Semester</h2>
+          <img src="course-image.jpg" alt="Course Image"><br>
+          <p>Web Technology</p>
+          <p>Hardware Engineering</p>
+          <p>Networking</p>
+          <p>Accounting</p>
+          <p>PHP</p>
+          <p>Entrepreneurship</p>
+      </section>
+      <section id="calendar">
+          <h2>Calendar of Activities</h2>
+          <iframe src="calendar.html" frameborder="0"></iframe>
+      </section>
+      <section id="testimonials">
+          <h2>Testimonials</h2>
+          <div class="testimonial-item">
+              <img src="testimonial-image1.jpg" alt="Testimonial 1">
+              <p>This is Mr Stephen speaking, Ebenezer Cobbinah was on of my best student in class among my top 5 recommendation, he has a solid work ethic towards his education and personal life </p>
+              <p><strong>Mr Stephen Mensah</strong>, Elective Mathematics Teacher</p>
+          </div>
+          <div class="testimonial-item">
+              <img src="testimonial-image2.jpg" alt="Testimonial 2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, magna eu congue mattis, nibh felis commodo sapien, in laoreet dui odio et purus. Fusce finibus nisi id magna vestibulum viverra.</p>
+              <p><strong>Jane Doe</strong>, Manager</p>
+          </div>
+          <div class="testimonial-item">
+              <img src="testimonial-image3.jpg" alt="Testimonial 3">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, magna eu congue mattis, nibh felis commodo sapien, in laoreet dui odio et purus. Fusce finibus nisi id magna vestibulum viverra.</p>
+              <p><strong>Bob Smith</strong>, Colleague</p>
+          </div>
+      </section>
+    </main>
+    <footer>
+        <p>&copy; Jason Platinum</p>
+    </footer>
+
+    <script>
+        // JavaScript code for the slider
+        var slideIndex = 1;
+        var slides = document.getElementsByClassName("slide");
+        var indicators = document.getElementsByClassName("slider-indicators")[0].getElementsByTagName("span");
+        
+        showSlide(slideIndex);
+        
+        function changeSlide(index) {
+            showSlide(slideIndex = index);
+        }
+        
+        function showSlide(index) {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.opacity = 0;
+            }
+          
+            for (var i = 0; i < indicators.length; i++) {
+                indicators[i].className = "";
+            }
+          
+            slides[slideIndex - 1].style.opacity = 1;
+            indicators[slideIndex - 1].className = "active";
+        }
+        
+        function nextSlide() {
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            showSlide(slideIndex);
+        }
+        
+        function previousSlide() {
+            slideIndex--;
+            if (slideIndex < 1) {
+                slideIndex = slides.length;
+            }
+            showSlide(slideIndex);
+        }
+        
+        setInterval(nextSlide, 4000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
+
+

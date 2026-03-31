@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Contacts </title>
+  <style>
+    table {
+      width: 100%;
+    }
+    th, td {
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form action="submit.php" method="post" enctype="multipart/form-data">
+    <table>
+      <tr>
+        <th>First Name:</th>
+        <td><input type="text" name="firstname" required></td>
+        <th>Last Name:</th>
+        <td><input type="text" name="lastname" required></td>
+      </tr>
+      <tr>
+        <th>Date of Birth:</th>
+        <td><input type="date" name="dob" required></td>
+        <th>Place of Birth:</th>
+        <td><input type="text" name="placeofbirth" required></td>
+      </tr>
+      <tr>
+        <th>Location:</th>
+        <td><input type="text" name="location" required></td>
+        <th>Country:</th>
+        <td><input type="text" name="country" required></td>
+      </tr>
+      <tr>
+        <th>House Number:</th>
+        <td><input type="text" name="housenumber" required></td>
+        <th>Gender:</th>
+        <td>
+          <input type="radio" name="gender" value="male" required> Male
+          <input type="radio" name="gender" value="female" required> Female
+        </td>
+      </tr>
+      <tr>
+        <th>Address:</th>
+        <td colspan="3"><textarea name="address" rows="4" required></textarea></td>
+      </tr>
+      <tr>
+        <th>Image Upload:</th>
+        <td colspan="3"><input type="file" name="imageupload" required></td>
+      </tr>
+    </table>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

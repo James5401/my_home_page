@@ -1,0 +1,205 @@
+
+    .slider {
+    position: relative;
+}
+
+.slider-container {
+    
+    
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px 10px;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.slider-indicators span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-indicators span.active {
+    background-color: #333;
+}
+
+
+        
+        header {
+            background-color: #333;
+            padding: 2.5px*10px*2.5px;
+            color: #35155a;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+            
+            
+
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 9px;
+            display: flex;
+            justify-content: space-between;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+            
+               
+        }
+
+        nav ul li {
+            margin-right: 10px;
+            padding: 2.5px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #2e1b1b;
+            padding: 2.5px;
+        }
+
+        main {
+            border-radius: 10px 10px;
+            padding: 10px;
+            background-color: #cdc8d4;
+            margin: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+        
+        }
+
+        
+        .slider-item {
+            margin: 10px;
+        }
+
+        #except {
+            margin-bottom: 20px;
+        }
+
+        #courses {
+            margin-bottom: 20px;
+        }
+
+        #calendar {
+            margin-bottom: 20px;
+        }
+
+        #testimonials {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            border-radius: 10px 10px;
+            padding: 10px;
+            
+            margin: 20px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #cdc8d4;
+            padding: 10px 10px;
+            color: #221818;
+            text-align: center;
+        }
+
+        body {
+            border-radius: 10px 10px;
+            background-image: url("assest/synthwave prime.jpg");
+            background-position: top;
+            background-repeat: no-repeat;
+            background-size: cover;}
+
+            :root {
+                --background: #cdc8d4;
+                --background-card: #735b94;
+            } 
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+                    
+            .background {
+                background-color: var(--background);
+                display: grid;
+                place-items: center;
+                height: 160vh;
+            
+            }
+            
+            .gallary {
+                display: flex;
+                left: calc( 50% - 330px);
+            }
+            
+            .card {
+                position: relative;
+                left: 0px;
+                width: 140px;
+                height: 260px;
+                background-color: var(--background-card);
+                border-radius: 8px;
+                transition: 1s ease-in-out;
+                overflow: hidden;
+                box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+            }
+            
+            .card:not(:first-child) {
+                margin-left: -45px;
+            
+            }
+            
+            .card:hover {
+                transform: translateY(-20px);
+                font-weight: bold;
+                cursor: pointer;
+            }
+            
+            .card:hover ~ .card {
+                right: 50px;
+            }
+            
+            .card img {
+                height: 260px;
+                object-fit: cover;
+                border-radius: 4px;
+            
+            }
+            
+
+ .rounded-button{
+    border-radius:5px;
+    background-color: #6f62e6;
+    color: #cdc8d4;
+    padding: 7px 70px 7px;
+    transition-duration: 1s ease;
+    cursor: pointer;
+    display: inline-block;
+    
+
+ }  
+
