@@ -1,0 +1,311 @@
+/* Modernize Webpage CSS Foundation */
+:root {
+    /* Colors */
+    --primary-color: #7c4dff;
+    --primary-light: #b47cff;
+    --primary-dark: #3f1dcb;
+    --secondary-color: #00e5ff;
+    --bg-dark: #0f172a;
+    --bg-darker: #020617;
+    --text-color: #f8fafc;
+    --text-muted: #94a3b8;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-blur: blur(12px);
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;   /* 8px */
+    --spacing-sm: 1rem;     /* 16px */
+    --spacing-md: 1.5rem;   /* 24px */
+    --spacing-lg: 2rem;     /* 32px */
+    --spacing-xl: 3rem;     /* 48px */
+
+    /* Typography */
+    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Fira Code', 'Courier New', monospace;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-slow: 0.4s ease;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(124, 77, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(0, 229, 255, 0.1) 0%, transparent 40%);
+    background-attachment: fixed;
+}
+
+/* Layout System */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--spacing-lg);
+    min-height: calc(100vh - 160px); /* header + footer approximation */
+}
+
+/* Typography Helpers */
+h1, h2, h3 {
+    margin-bottom: var(--spacing-sm);
+    line-height: 1.2;
+    color: var(--primary-light);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+p { margin-bottom: var(--spacing-md); }
+
+/* Navigation */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: var(--spacing-sm) var(--spacing-lg);
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: var(--spacing-md);
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+nav ul li a:hover {
+    color: var(--primary-light);
+}
+
+/* Components: Cards & Glassmorphism */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: 1rem;
+    padding: var(--spacing-lg);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Slider Section */
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    margin-bottom: var(--spacing-xl);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slider-indicators span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.slider-indicators span.active {
+    background: var(--primary-light);
+    transform: scale(1.2);
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.card {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Courses & Calendar Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.grid-item {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: var(--spacing-md);
+    border-radius: 1rem;
+    transition: var(--transition-fast);
+}
+
+.grid-item:hover {
+    border-color: var(--primary-light);
+}
+
+/* Forms */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    background: var(--bg-darker);
+    border: 1px solid var(--glass-border);
+    border-radius: 0.5rem;
+    color: var(--text-color);
+    font-family: var(--font-main);
+    transition: var(--transition-fast);
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-light);
+    box-shadow: 0 0 0 2px rgba(124, 77, 255, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.btn:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    padding: var(--spacing-xl) var(--spacing-lg);
+    text-align: center;
+    border-top: 1px solid var(--glass-border);
+    color: var(--text-muted);
+}
+
+/* Highlight Section */
+#highlight-container {
+    width: 100%;
+    margin-top: var(--spacing-md);
+    overflow: hidden;
+}
+
+#highlight-canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    
+    nav ul {
+        justify-content: center;
+        gap: var(--spacing-sm);
+    }
+    
+    main {
+        padding: var(--spacing-md);
+    }
+    
+    .slider {
+        height: 300px;
+    }
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ebenezer Cobbinah | Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="testimonial.html">Testimonials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slider">
+            <div class="slider-container">
+                <img src="assets/goose.jpg" class="slide active" alt="Goose Project">
+                <img src="assets/hello.jpeg" class="slide" alt="Hello World">
+                <img src="assets/synthwave prime.jpg" class="slide" alt="Synthwave Background">
+            </div>
+            <div class="slider-indicators">
+                <span class="active"></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <section class="glass-card">
+            <h1>About Me</h1>
+            <p>
+                My name is <strong>Ebenezer Cobbinah</strong> (Index: [0721000116]), but I'm better known as <strong>"0xide"</strong>. 
+                Fascinated by science and technology since childhood, I have always loved uncovering the inner workings of electronic devices. 
+                As I've grown, my passion for technology and programming has only intensified. I aspire to become a 
+                <strong>Research Scientist</strong> focused on machine learning algorithms.
+            </p>
+            <p>
+                I am particularly interested in <strong>Large Language Models (LLMs)</strong> and how they learn from vast amounts of data—textbooks, academic papers, and forum discussions. 
+                My goal is to develop reinforcement learning algorithms that solve real-world problems and enhance human lives. 
+                Specifically, I'm exploring the intersection of AI and hardware, using deep neural networks and evolutionary algorithms to 
+                design the next generation of RISC and CISC-based CPUs and SoCs.
+            </p>
+            <div style="margin-top: 2rem;">
+                <a href="calendar.html" class="btn" style="margin-right: 1rem;">View Calendar</a>
+                <a href="courses.html" class="btn">View Courses</a>
+            </div>
+        </section>
+
+        <section class="glass-card" id="highlight-section">
+            <h2>Featured Highlight</h2>
+            <div id="highlight-container">
+                <canvas id="highlight-canvas"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Jason Platinum (Ebenezer Cobbinah). All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="javascript.js"></script>
+</body>
+</html>
