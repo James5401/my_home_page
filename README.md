@@ -1,3 +1,3 @@
 A personal website about me 
 
-https://github.com/James5401/my_home_page.git
+https://james5401.github.io/my_home_page/
