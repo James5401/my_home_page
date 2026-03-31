@@ -3,47 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Calendar | Ebenezer Cobbinah</title>
+    <title>Calendar | 0xide</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .calendar-list {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-        }
-        .calendar-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-            background: var(--glass-bg);
-            border: 1px solid var(--glass-border);
-            border-radius: 0.5rem;
-            transition: var(--transition-fast);
-        }
-        .calendar-item:hover {
-            border-color: var(--primary-light);
-            background: rgba(255,255,255,0.08);
-        }
-        .calendar-date {
-            font-weight: 700;
-            color: var(--primary-light);
-            min-width: 150px;
-        }
-        .calendar-event {
-            flex-grow: 1;
-            text-align: right;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scanline"></div>
+    <div class="grid-bg"></div>
+
     <header>
         <nav>
+            <a href="index.html" class="nav-logo">&lt;0xide/&gt;</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="testimonial.html">Testimonials</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -52,43 +30,48 @@
     </header>
 
     <main>
-        <section class="glass-card">
-            <h1>Academic Calendar</h1>
+        <section class="page-header">
+            <span class="page-tag">&gt; cat ~/calendar.log</span>
+            <h1><span class="text-gradient">Academic</span> Calendar</h1>
             <p>Important dates and activities for the current semester.</p>
         </section>
 
         <div class="calendar-list">
             <div class="calendar-item">
-                <span class="calendar-date">3rd July, 2023</span>
+                <span class="calendar-date">[ 2023-07-03 ]</span>
                 <span class="calendar-event">Mid-Semester Exam</span>
             </div>
             <div class="calendar-item">
-                <span class="calendar-date">9th July, 2023</span>
+                <span class="calendar-date">[ 2023-07-09 ]</span>
                 <span class="calendar-event">End of Mid-Semester Exam</span>
             </div>
             <div class="calendar-item">
-                <span class="calendar-date">13th August, 2023</span>
+                <span class="calendar-date">[ 2023-08-13 ]</span>
                 <span class="calendar-event">End of Semester Exam Starts</span>
             </div>
             <div class="calendar-item">
-                <span class="calendar-date">27th August, 2023</span>
+                <span class="calendar-date">[ 2023-08-27 ]</span>
                 <span class="calendar-event">End of Semester Exam Ends</span>
             </div>
             <div class="calendar-item">
-                <span class="calendar-date">29th August, 2023</span>
+                <span class="calendar-date">[ 2023-08-29 ]</span>
                 <span class="calendar-event">Vacation Begins</span>
             </div>
             <div class="calendar-item">
-                <span class="calendar-date">11th Sept, 2023</span>
+                <span class="calendar-date">[ 2023-09-11 ]</span>
                 <span class="calendar-event">Industrial Attachment</span>
             </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Jason Platinum (Ebenezer Cobbinah). All rights reserved.</p>
+        <div class="footer-content">
+            <span class="footer-logo">&lt;0xide/&gt;</span>
+            <p>&copy; 2026 Ebenezer Cobbinah. All rights reserved.</p>
+            <p class="mono-text footer-tagline">// building the future, one bit at a time</p>
+        </div>
     </footer>
 
-    <script src="javascript.js"></script>
+    <script type="module" src="javascript.js"></script>
 </body>
 </html>

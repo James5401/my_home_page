@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery | Ebenezer Cobbinah</title>
+    <title>Gallery | 0xide</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scanline"></div>
+    <div class="grid-bg"></div>
+
     <header>
         <nav>
+            <a href="index.html" class="nav-logo">&lt;0xide/&gt;</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
                 <li><a href="testimonial.html">Testimonials</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -22,37 +30,42 @@
     </header>
 
     <main>
-        <section class="glass-card">
-            <h1>Project Gallery</h1>
-            <p>A collection of my work and experiences through visuals.</p>
+        <section class="page-header">
+            <span class="page-tag">&gt; ls ~/projects/gallery/</span>
+            <h1><span class="text-gradient">Project</span> Gallery</h1>
+            <p>A collection of work and experiences through visuals.</p>
         </section>
 
         <section class="gallery">
             <article class="card">
-                <img src="assets/make.jpg" alt="Preview" title="preview">
+                <img src="assets/make.jpg" alt="Project Preview" title="Project preview">
             </article>
             <article class="card">
-                <img src="assets/make1.jpg" alt="Preview" title="preview">
+                <img src="assets/make1.jpg" alt="Project Preview" title="Project preview">
             </article>
             <article class="card">
-                <img src="assets/make2.jpg" alt="Preview" title="preview">
+                <img src="assets/make2.jpg" alt="Project Preview" title="Project preview">
             </article>
             <article class="card">
-                <img src="assets/goose.jpg" alt="Preview" title="preview">
+                <img src="assets/goose.jpg" alt="Goose Project" title="Goose project">
             </article>
             <article class="card">
-                <img src="assets/hello.jpeg" alt="Preview" title="preview">
+                <img src="assets/hello.jpeg" alt="Hello World" title="Hello world">
             </article>
             <article class="card">
-                <img src="assets/king.jpeg" alt="Preview" title="preview">
+                <img src="assets/king.jpeg" alt="King" title="King">
             </article>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Jason Platinum (Ebenezer Cobbinah). All rights reserved.</p>
+        <div class="footer-content">
+            <span class="footer-logo">&lt;0xide/&gt;</span>
+            <p>&copy; 2026 Ebenezer Cobbinah. All rights reserved.</p>
+            <p class="mono-text footer-tagline">// building the future, one bit at a time</p>
+        </div>
     </footer>
 
-    <script src="javascript.js"></script>
+    <script type="module" src="javascript.js"></script>
 </body>
 </html>

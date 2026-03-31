@@ -3,74 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testimonials | Ebenezer Cobbinah</title>
+    <title>Testimonials | 0xide</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: var(--spacing-lg);
-        }
-        .testimonial-card {
-            display: flex;
-            flex-direction: column;
-            gap: var(--spacing-md);
-        }
-        .testimonial-profile {
-            display: flex;
-            align-items: center;
-            gap: var(--spacing-sm);
-        }
-        .testimonial-profile img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid var(--primary-light);
-        }
-        .testimonial-profile h3 {
-            margin-bottom: 0;
-            font-size: 1.1rem;
-        }
-        .testimonial-profile p {
-            margin-bottom: 0;
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-        .testimonial-text {
-            font-style: italic;
-            color: var(--text-color);
-            position: relative;
-        }
-        .testimonial-text::before {
-            content: '"';
-            font-size: 3rem;
-            position: absolute;
-            top: -20px;
-            left: -10px;
-            opacity: 0.1;
-            color: var(--primary-light);
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scanline"></div>
+    <div class="grid-bg"></div>
+
     <header>
         <nav>
+            <a href="index.html" class="nav-logo">&lt;0xide/&gt;</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="testimonial.html">Testimonials</a></li>
+                <li><a href="testimonial.html" class="active">Testimonials</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="glass-card">
-            <h1>Testimonials</h1>
+        <section class="page-header">
+            <span class="page-tag">&gt; cat ~/testimonials.json</span>
+            <h1><span class="text-gradient">Testimonials</span></h1>
             <p>Kind words from teachers, teammates, and colleagues.</p>
         </section>
 
@@ -117,9 +79,13 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Jason Platinum (Ebenezer Cobbinah). All rights reserved.</p>
+        <div class="footer-content">
+            <span class="footer-logo">&lt;0xide/&gt;</span>
+            <p>&copy; 2026 Ebenezer Cobbinah. All rights reserved.</p>
+            <p class="mono-text footer-tagline">// building the future, one bit at a time</p>
+        </div>
     </footer>
 
-    <script src="javascript.js"></script>
+    <script type="module" src="javascript.js"></script>
 </body>
 </html>

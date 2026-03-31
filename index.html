@@ -3,18 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ebenezer Cobbinah | Personal Website</title>
+    <title>0xide | Ebenezer Cobbinah</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scanline"></div>
+    <div class="grid-bg"></div>
+
     <header>
         <nav>
+            <a href="index.html" class="nav-logo">&lt;0xide/&gt;</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="testimonial.html">Testimonials</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -23,49 +30,125 @@
     </header>
 
     <main>
-        <section class="slider">
-            <div class="slider-container">
-                <img src="assets/goose.jpg" class="slide active" alt="Goose Project">
-                <img src="assets/hello.jpeg" class="slide" alt="Hello World">
-                <img src="assets/synthwave prime.jpg" class="slide" alt="Synthwave Background">
-            </div>
-            <div class="slider-indicators">
-                <span class="active"></span>
-                <span></span>
-                <span></span>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-tag typing-effect">&gt; initializing system...</p>
+                    <h1>Ebenezer<br><span class="text-gradient">Cobbinah</span></h1>
+                    <p class="hero-subtitle mono-text">aka <span class="text-accent">"0xide"</span> // Research Scientist in Training</p>
+                    <p class="hero-description">
+                        Fascinated by the intersection of <strong>machine learning</strong> and <strong>hardware design</strong>.
+                        Building the next generation of RISC/CISC processors using deep neural networks and evolutionary algorithms.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="contact.html" class="btn btn-primary">
+                            <span class="btn-icon">&gt;_</span> Get In Touch
+                        </a>
+                        <a href="gallery.html" class="btn btn-outline">
+                            View Projects
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">0xide@neural-lab:~</span>
+                        </div>
+                        <div class="terminal-body" id="terminal-body">
+                            <div class="terminal-line"><span class="prompt">$</span> cat about.txt</div>
+                            <div class="terminal-line output">Student &amp; aspiring Research Scientist</div>
+                            <div class="terminal-line output">Focus: LLMs, Neural Architecture, CPU/SoC Design</div>
+                            <div class="terminal-line"><span class="prompt">$</span> ls interests/</div>
+                            <div class="terminal-line output">deep-learning/ evolutionary-algorithms/ risc-v/ hardware-ai/</div>
+                            <div class="terminal-line"><span class="prompt">$</span> echo $GOAL</div>
+                            <div class="terminal-line output">"Create hardware that can adapt and learn"</div>
+                            <div class="terminal-line cursor-line"><span class="prompt">$</span> <span class="cursor">_</span></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="glass-card">
-            <h1>About Me</h1>
-            <p>
-                My name is <strong>Ebenezer Cobbinah</strong> (Index: [0721000116]), but I'm better known as <strong>"0xide"</strong>. 
-                Fascinated by science and technology since childhood, I have always loved uncovering the inner workings of electronic devices. 
-                As I've grown, my passion for technology and programming has only intensified. I aspire to become a 
-                <strong>Research Scientist</strong> focused on machine learning algorithms.
-            </p>
-            <p>
-                I am particularly interested in <strong>Large Language Models (LLMs)</strong> and how they learn from vast amounts of data—textbooks, academic papers, and forum discussions. 
-                My goal is to develop reinforcement learning algorithms that solve real-world problems and enhance human lives. 
-                Specifically, I'm exploring the intersection of AI and hardware, using deep neural networks and evolutionary algorithms to 
-                design the next generation of RISC and CISC-based CPUs and SoCs.
-            </p>
-            <div style="margin-top: 2rem;">
-                <a href="calendar.html" class="btn" style="margin-right: 1rem;">View Calendar</a>
-                <a href="courses.html" class="btn">View Courses</a>
+        <section class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number" data-target="7">0</span>
+                <span class="stat-label">Courses</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="3">0</span>
+                <span class="stat-label">Testimonials</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" data-target="6">0</span>
+                <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">AI</span>
+                <span class="stat-label">Focus Area</span>
             </div>
         </section>
 
-        <section class="glass-card" id="highlight-section">
-            <h2>Featured Highlight</h2>
-            <div id="highlight-container">
-                <canvas id="highlight-canvas"></canvas>
+        <section class="section-block">
+            <h2 class="section-title"><span class="title-decorator">//</span> About Me</h2>
+            <div class="about-grid">
+                <div class="glass-card about-card">
+                    <div class="card-icon">&#x1F9E0;</div>
+                    <h3>Machine Learning</h3>
+                    <p>Exploring Large Language Models and how they learn from vast datasets. Developing reinforcement learning algorithms for real-world applications.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="card-icon">&#x2699;</div>
+                    <h3>Hardware Design</h3>
+                    <p>Using deep neural networks and evolutionary algorithms to design next-generation RISC and CISC-based CPUs and SoCs.</p>
+                </div>
+                <div class="glass-card about-card">
+                    <div class="card-icon">&#x1F680;</div>
+                    <h3>The 0xide Vision</h3>
+                    <p>Creating hardware that can adapt and learn, mirroring complex biological systems to support tomorrow's artificial general intelligence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title"><span class="title-decorator">//</span> Featured Highlight</h2>
+            <div class="glass-card" id="highlight-section">
+                <div id="highlight-container">
+                    <canvas id="highlight-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block">
+            <h2 class="section-title"><span class="title-decorator">//</span> Quick Links</h2>
+            <div class="links-grid">
+                <a href="calendar.html" class="link-card glass-card">
+                    <span class="link-icon">&#x1F4C5;</span>
+                    <span class="link-text">Academic Calendar</span>
+                    <span class="link-arrow">&rarr;</span>
+                </a>
+                <a href="courses.html" class="link-card glass-card">
+                    <span class="link-icon">&#x1F4DA;</span>
+                    <span class="link-text">Current Courses</span>
+                    <span class="link-arrow">&rarr;</span>
+                </a>
+                <a href="gallery.html" class="link-card glass-card">
+                    <span class="link-icon">&#x1F5BC;</span>
+                    <span class="link-text">Project Gallery</span>
+                    <span class="link-arrow">&rarr;</span>
+                </a>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Jason Platinum (Ebenezer Cobbinah). All rights reserved.</p>
+        <div class="footer-content">
+            <span class="footer-logo">&lt;0xide/&gt;</span>
+            <p>&copy; 2026 Ebenezer Cobbinah. All rights reserved.</p>
+            <p class="mono-text footer-tagline">// building the future, one bit at a time</p>
+        </div>
     </footer>
 
     <script type="module" src="javascript.js"></script>
