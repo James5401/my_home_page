@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Courses | Ebenezer Cobbinah</title>
+    <title>Courses | 0xide</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="scanline"></div>
+    <div class="grid-bg"></div>
+
     <header>
         <nav>
+            <a href="index.html" class="nav-logo">&lt;0xide/&gt;</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html" class="active">Courses</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="testimonial.html">Testimonials</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -22,43 +30,51 @@
     </header>
 
     <main>
-        <section class="glass-card">
-            <h1>Courses This Semester</h1>
-            <p>A breakdown of the modules I'm currently studying.</p>
+        <section class="page-header">
+            <span class="page-tag">&gt; cat ~/courses.json</span>
+            <h1><span class="text-gradient">Courses</span> This Semester</h1>
+            <p>A breakdown of the modules currently in progress.</p>
         </section>
 
         <div class="grid-container">
             <article class="grid-item">
+                <span class="course-num">// 01</span>
                 <h3>Web Technology</h3>
                 <p>Basics of web development, including HTML, CSS, and JavaScript. Focuses on creating both static and dynamic web pages.</p>
             </article>
 
             <article class="grid-item">
+                <span class="course-num">// 02</span>
                 <h3>Hardware Engineering</h3>
                 <p>Computer hardware fundamentals: CPU, memory, and storage devices. Understanding how components work together in a system.</p>
             </article>
 
             <article class="grid-item">
+                <span class="course-num">// 03</span>
                 <h3>Networking</h3>
                 <p>Basics of computer networking, types of networks, troubleshooting, and security threats in interconnected systems.</p>
             </article>
 
             <article class="grid-item">
+                <span class="course-num">// 04</span>
                 <h3>Accounting</h3>
                 <p>Keeping track of financial transactions, preparing financial statements, and analyzing financial data.</p>
             </article>
 
             <article class="grid-item">
+                <span class="course-num">// 05</span>
                 <h3>PHP Development</h3>
                 <p>Using PHP to create dynamic web pages, interact with databases, and build full-scale web applications.</p>
             </article>
 
             <article class="grid-item">
+                <span class="course-num">// 06</span>
                 <h3>Entrepreneurship</h3>
                 <p>Starting and developing a business, creating business plans, marketing, and choosing the right business model.</p>
             </article>
 
             <article class="grid-item">
+                <span class="course-num">// 07</span>
                 <h3>Software Engineering</h3>
                 <p>Fundamentals of software development processes, testing, quality assurance, and design patterns.</p>
             </article>
@@ -66,9 +82,13 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Jason Platinum (Ebenezer Cobbinah). All rights reserved.</p>
+        <div class="footer-content">
+            <span class="footer-logo">&lt;0xide/&gt;</span>
+            <p>&copy; 2026 Ebenezer Cobbinah. All rights reserved.</p>
+            <p class="mono-text footer-tagline">// building the future, one bit at a time</p>
+        </div>
     </footer>
 
-    <script src="javascript.js"></script>
+    <script type="module" src="javascript.js"></script>
 </body>
 </html>
